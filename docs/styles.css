@@ -1,0 +1,919 @@
+/* 全局樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #4D4D4D;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* 按鈕 */
+.btn-primary {
+    background-color: #4CAF4F;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: #4CAF4F;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-signup {
+    background-color: #4CAF4F;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-demo {
+    background-color: #4CAF4F;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* 頁眉 */
+.header {
+    background-color: #FFFFFF;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #263238;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    gap: 50px;
+}
+
+.menu a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #18191F;
+    position: relative;
+    padding: 5px 0;
+}
+
+.menu a.active {
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4CAF4F;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover::after, .menu a.active::after {
+    width: 100%;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #4D4D4D;
+    border-radius: 3px;
+}
+
+/* 英雄部分 */
+.hero {
+    background-color: #F5F7FA;
+    padding: 96px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #4CAF4F;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* 客戶部分 */
+.clients {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #717171;
+    font-size: 16px;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.logo-item {
+    flex: 0 0 calc(16.666% - 25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+/* 社區部分 */
+.community {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.community-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    margin-top: 50px;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 32px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(171, 190, 209, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    margin-bottom: 16px;
+}
+
+.icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px 5px 10px 5px;
+    background-color: #E8F5E9;
+}
+
+.card h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #4D4D4D;
+}
+
+.card p {
+    color: #717171;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* 解鎖部分 */
+.unlock {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.unlock .container {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+}
+
+.unlock-image {
+    flex: 1;
+}
+
+.unlock-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.unlock-content h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #4D4D4D;
+}
+
+.unlock-content p {
+    color: #717171;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* 成就部分 */
+.achievements {
+    padding: 64px 0;
+    background-color: #F5F7FA;
+}
+
+.achievements .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.achievements-header {
+    flex: 1;
+    max-width: 540px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    color: #4D4D4D;
+}
+
+.achievements-header p {
+    color: #717171;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.achievements-counts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.count-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.count-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.count-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4CAF4F;
+    font-size: 24px;
+}
+
+.count-details h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4D4D4D;
+}
+
+.count-details p {
+    color: #717171;
+    font-size: 16px;
+}
+
+/* 日曆部分 */
+.calendar {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.calendar .container {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+}
+
+.calendar-image {
+    flex: 1;
+}
+
+.calendar-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.calendar-content h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #4D4D4D;
+}
+
+.calendar-content p {
+    color: #717171;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* 客戶見證 */
+.testimonials {
+    padding: 32px 0;
+    background-color: #F5F7FA;
+}
+
+.testimonials .container {
+    display: flex;
+    align-items: center;
+    gap: 78px;
+}
+
+.testimonial-image {
+    flex: 1;
+    max-width: 436px;
+}
+
+.testimonial-image img {
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+}
+
+.testimonial-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.testimonial-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-text p {
+    color: #717171;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.testimonial-author h4 {
+    color: #4CAF4F;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.testimonial-author p {
+    color: #89939E;
+    font-size: 16px;
+}
+
+.testimonial-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.logos-row {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+    flex-wrap: wrap;
+}
+
+.view-customers {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+
+.view-customers a {
+    color: #4CAF4F;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 部落格部分 */
+.blog {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+}
+
+.blog-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+    margin-top: 40px;
+}
+
+.blog-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.1);
+}
+
+.blog-content {
+    width: 100%;
+    padding: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+    border-radius: 8px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #717171;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.read-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+
+.read-more a {
+    color: #4CAF4F;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* CTA部分 */
+.cta {
+    padding: 32px 0;
+    background-color: #F5F7FA;
+}
+
+.cta .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.cta h2 {
+    font-size: 64px;
+    font-weight: 600;
+    color: #263238;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* 頁腳 */
+.footer {
+    background-color: #263238;
+    color: #FFFFFF;
+    padding: 64px 0;
+}
+
+.footer-main {
+    display: flex;
+    gap: 125px;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.footer-logo img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #F5F7FA;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.link-column h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.link-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.link-column a {
+    color: #F5F7FA;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.link-column a:hover {
+    color: #4CAF4F;
+}
+
+.subscribe {
+    position: relative;
+}
+
+.subscribe input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.subscribe input::placeholder {
+    color: #D9DBE1;
+}
+
+.subscribe button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* 響應式設計 */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    
+    .cta h2 {
+        font-size: 48px;
+    }
+    
+    .footer-main {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero .container, .unlock .container, .calendar .container, .testimonials .container {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .achievements .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .count-row {
+        justify-content: center;
+    }
+    
+    .hero-image, .unlock-image, .calendar-image, .testimonial-image {
+        order: -1;
+    }
+    
+    .hero-content, .unlock-content, .calendar-content, .achievements-header {
+        max-width: 100%;
+    }
+    
+    .community-cards, .blog-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card, .blog-card {
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .testimonial-content {
+        text-align: center;
+    }
+    
+    .testimonial-author {
+        align-items: center;
+    }
+    
+    .logos-row {
+        justify-content: center;
+    }
+    
+    .view-customers {
+        justify-content: center;
+    }
+    
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .footer-links {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: #FFFFFF;
+        padding: 20px;
+        transition: left 0.3s ease;
+    }
+    
+    .nav.active {
+        left: 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .auth-buttons {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .section-header h2, .unlock-content h2, .calendar-content h2, .section-title h2 {
+        font-size: 28px;
+    }
+    
+    .cta h2 {
+        font-size: 36px;
+    }
+    
+    .count-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .testimonial-logos {
+        gap: 20px;
+    }
+    
+    .logos-row {
+        gap: 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .link-column {
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero, .unlock, .calendar, .testimonials {
+        padding: 40px 0;
+    }
+    
+    .client-logos {
+        justify-content: center;
+    }
+    
+    .logo-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+    
+    .count-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .blog-content {
+        margin-top: -30px;
+    }
+}
